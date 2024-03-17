@@ -69,3 +69,11 @@ app.post('/newbook', (req, res) => {
     }
 
 })
+
+app.get('/available', (_, res) => {
+  BooksStatus.show_all_books_status(res);
+})
+
+app.get('/authors', (_, res) => {
+  Authors.show_all_authors(res);
+})
